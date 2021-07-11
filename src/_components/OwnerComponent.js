@@ -18,6 +18,7 @@ export default function OwnerComponent(props) {
     gender: "",
     dob: "",
     address: "",
+    nin: "",
     phone1: "",
     phone2: "",
     email: "",
@@ -69,6 +70,7 @@ export default function OwnerComponent(props) {
           <p>Gender:  <input type="text" className="form-control short-text-input-60" name="gender" value="test" disabled onChange={handleChange} /></p>
           <p>DOB:     <input type="text" className="form-control short-text-input-60" name="dob" value="test" disabled onChange={handleChange} /></p>
           <p>Address: <input type="text" className="form-control short-text-input-80" name="address" value="test" disabled onChange={handleChange} /></p>
+          <p>Nin:    <input type="text" className="form-control short-text-input-60" name="nin" defaultValue="Ismail" disabled  onChange={handleChange} /></p>
           <p>Phone1:  <input type="text" className="form-control short-text-input-60" name="phone1" value="test" disabled onChange={handleChange} /></p>
           <p>Phone2:  <input type="text" className="form-control short-text-input-60" name="phone2" value="test" disabled onChange={handleChange} /></p>
           <p>Email:  <input type="text" className="form-control short-text-input-60" name="email" value="test" disabled onChange={handleChange} /></p>
@@ -84,9 +86,11 @@ export default function OwnerComponent(props) {
       <div className={classes.root} onLoad={manageInputTag}>
         <div className="container-fluid raised-box raised-box-theme">
           <p>Name:    <input type="text" className="form-control short-text-input-60" name="name" defaultValue="Ismail"  onChange={handleChange} /></p>
-          <p>Gender:  <input type="text" className="form-control short-text-input-60" name="gender" defaultValue="test" onChange={handleChange} /></p>
-          <p>DOB:     <input type="text" className="form-control short-text-input-60" name="dob" defaultValue="test" onChange={handleChange} /></p>
-          <p>Address: <input type="text" className="form-control short-text-input-80" name="address" defaultValue="test" onChange={handleChange} /></p>
+          <p>Gender:  <input type="text" className="form-control short-text-input-40" name="gender" defaultValue="test" onChange={handleChange} /> DOB:     
+            <input type="text" className="form-control short-text-input-40" name="dob" defaultValue="test" onChange={handleChange} /> </p>
+          <p></p>
+          <p>Address: <input type="text" className="form-control short-text-input-60" name="address" defaultValue="test" onChange={handleChange} /></p>
+          <p>Nin: <input type="text" className="form-control short-text-input-80" name="nin" defaultValue="test" onChange={handleChange} /></p>
           <p>Phone1:  <input type="text" className="form-control short-text-input-60" name="phone1" defaultValue="test" onChange={handleChange} /></p>
           <p>Phone2:  <input type="text" className="form-control short-text-input-60" name="phone2" defaultValue="test" onChange={handleChange} /></p>
           <p>Email:  <input type="text" className="form-control short-text-input-60" name="email" defaultValue="test" onChange={handleChange} /></p>
@@ -105,6 +109,7 @@ export default function OwnerComponent(props) {
           <p>Gender:  <input type="text" className="form-control short-text-input-60" name="gender" placeholder="test" onChange={handleChange} /></p>
           <p>DOB:     <input type="date" className="form-control short-text-input-60" name="dob" placeholder="test" onChange={handleChange} /></p>
           <p>Address: <input type="text" className="form-control short-text-input-80" name="address" placeholder="test" onChange={handleChange} /></p>
+          <p>Nin: <input type="text" className="form-control short-text-input-80" name="nin" placeholder="test" onChange={handleChange} /></p>
           <p>Phone1:  <input type="text" className="form-control short-text-input-60" name="phone1" placeholder="test" onChange={handleChange} /></p>
           <p>Phone2:  <input type="text" className="form-control short-text-input-60" name="phone2" placeholder="test" onChange={handleChange} /></p>
           <p>Email:  <input type="text" className="form-control short-text-input-60" name="email" placeholder="test" onChange={handleChange} /></p>

@@ -9,13 +9,25 @@ import './Dashboard.css'
 import EnhancedTable from '../_components/SearchTable';
 
 class Dashboard extends React.Component {
+
+    constructor(props){
+        super(props);
+
+        this.state = {
+            submitted: false,
+        };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
     componentDidMount() {
-        this.props.dispatch(userActions.getAll());
+        // this.props.dispatch(userActions.getAll());
     }
 
     handleChange(e) {
         const { name, value } = e.target;
         this.setState({ [name]: value });
+
     }
 
     handleSubmit(e) {
@@ -41,7 +53,7 @@ class Dashboard extends React.Component {
                                 <h2 className="text-center mt-2">Welcome to the LIS App.</h2>
                                 <div className="d-flex bd-highlight">
                                     <div className="p-2 m-2 bd-highlight">Email: {user.email}</div>
-                                    <div className="p-2 m-2 bd-highlight">Address: {user.address}</div>
+                                    <div className="p-2 m-2 bd-highlight">Address: {user.wAddress}</div>
                                 </div>
                                 <div>
                                     No document selected. Please search below.

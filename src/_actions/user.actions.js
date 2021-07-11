@@ -33,6 +33,7 @@ function login(username, password) {
 
 function logout() {
     userService.logout();
+    console.log("logging out");
     return { type: userConstants.LOGOUT };
 }
 

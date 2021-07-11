@@ -14,6 +14,7 @@ export default function LandComponent(props) {
   const { view, create } = props;  
 
   const state = {
+    state: "",
     district: "",
     cadzone: "",
     plotNumber: "",
@@ -51,6 +52,7 @@ export default function LandComponent(props) {
     return (
       <div className={classes.root}>
         <div className="container-fluid raised-box raised-box-theme">
+          <p>State: <input type="text" className="form-control short-text-input-60" name="state" value="test" disabled onChange={handleChange} /></p>
           <p>District: <input type="text" className="form-control short-text-input-60" name="district" value="test" disabled onChange={handleChange} /></p>
           <p>Cadzone: <input type="text" className="form-control short-text-input-60" name="cadzone" value="test" disabled onChange={handleChange} /></p>
           <p>Plot Number: <input type="text" className="form-control short-text-input-60" name="plotNumber" value="test" disabled onChange={handleChange} /></p>
@@ -68,6 +70,7 @@ export default function LandComponent(props) {
     return (
       <div className={classes.root}>
         <div className="container-fluid raised-box raised-box-theme">
+          <p>State: <input type="text" className="form-control short-text-input-60" name="state" defaultValue="test" onChange={handleChange} /></p>
           <p>District: <input type="text" className="form-control short-text-input-60" name="district" defaultValue="test" onChange={handleChange} /></p>
           <p>Cadzone: <input type="text" className="form-control short-text-input-60" name="cadzone" defaultValue="test" onChange={handleChange} /></p>
           <p>Plot Number: <input type="text" className="form-control short-text-input-60" name="plotNumber" defaultValue="test" onChange={handleChange} /></p>
@@ -86,6 +89,7 @@ export default function LandComponent(props) {
     return (
       <div className={classes.root}>
         <div className="container-fluid raised-box raised-box-theme">
+          <p>State: <input type="text" className="form-control short-text-input-60" name="state" placeholder="test" onChange={handleChange} /></p>
           <p>District: <input type="text" className="form-control short-text-input-60" name="district" placeholder="test" onChange={handleChange} /></p>
           <p>Cadzone: <input type="text" className="form-control short-text-input-60" name="cadzone" placeholder="test" onChange={handleChange} /></p>
           <p>Plot Number: <input type="text" className="form-control short-text-input-60" name="plotNumber" placeholder="test" onChange={handleChange} /></p>

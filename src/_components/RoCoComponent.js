@@ -108,7 +108,7 @@ export default function OwnerComponent(props) {
                   </table>
               </div>
               <div className="vertical-line" />
-              <div class="col-sm-2 imgUp"> 
+              <div className="col-sm-2 imgUp"> 
                 <div className="imagePreview img-responsive">
                   {$imagePreview}
                 </div>
@@ -152,7 +152,7 @@ export default function OwnerComponent(props) {
                   </table>
               </div>
               <div className="vertical-line" />
-              <div class="col-md-6 imgUp">                
+              <div className="col-md-6 imgUp">                
                 <form onSubmit={(e)=>handleSubmit(e)}>
                   <input className="fileInput btn btn-secondary my-1 mb-1" 
                     type="file" 

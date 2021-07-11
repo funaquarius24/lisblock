@@ -8,29 +8,29 @@ export const userService = {
     getAll
 };
 
-function login(username, password) {
+async function login(email, password) {
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
+        body: JSON.stringify({ email, password })
     };
 
-    return fetch(`${apiUrl}/users/authenticate`, requestOptions)
-        .then(handleResponse)
-        .then(user => {
-            // store user details and jwt token in local storage to keep user logged in between page refreshes
-            localStorage.setItem('user', JSON.stringify(user));
-
-            return user;
-        });
+    const response = await fetch(`${apiUrl}/auth`, requestOptions);
+    console.log(response);
+    const user = await handleResponse(response);
+    // store user details and jwt token in local storage to keep user logged in between page refreshes
+    localStorage.setItem('user', JSON.stringify(user));
+    return user;
 }
 
 function logout() {
     // remove user from local storage to log user out
+    console.log("logout called removeItem");
     localStorage.removeItem('user');
 }
 
 function getAll() {
+    console.log("getAll called");
     const requestOptions = {
         method: 'GET',
         headers: authHeader()
@@ -45,6 +45,7 @@ function handleResponse(response) {
         if (!response.ok) {
             if (response.status === 401) {
                 // auto logout if 401 response returned from api
+                console.log("logging out in userservice");
                 logout();
                 window.location.reload(true);
             }
